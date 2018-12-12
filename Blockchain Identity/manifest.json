@@ -1,0 +1,36 @@
+{
+  "name": "My Blockchain Identity",
+  "version": "1.0",
+  "description": "Take your identity with you.",
+  "manifest_version": 2,
+  "permissions": [
+          "activeTab","declarativeContent", "storage"
+        ],
+	"background": {
+      "scripts": ["identityStorage.js"],
+      "persistent": false
+    },
+	
+	"content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://sxa.storefront.com/registration","https://habitatcommerce9.xcentium.net/register"]
+  }],
+  "icons": {
+    "16": "download.png",
+    "32": "download.png",
+    "48": "download.png",
+    "128": "download.png"
+  },
+  "page_action": {
+  
+	"default_popup": "addressInput.html",      
+  "default_icon": {
+        "16": "download.png",
+        "32": "download.png",
+        "48": "download.png",
+        "128": "download.png"
+      }
+	  }
+	  
+	  
+}
